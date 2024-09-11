@@ -12,3 +12,10 @@
 Questions
 - what is "CLIP Vision"? what is the difference between "CLIP" and "CLIP Vision"?
 - what does "cfg" do in KSmapler? why with more conditioning, cfg should be lower?
+
+
+## InstantID Advanced Node
+- it has two components - IPAdapter embedding, ControlNet
+- IPAdapter apply up to 25% and ControlNet takes care of the rest
+- rule of thumb: keep low weight on IPAdapter to make the result stay close to the prompt
+![image](https://github.com/user-attachments/assets/ee8f3a39-ca0a-443b-94e7-eee99eefe982)
