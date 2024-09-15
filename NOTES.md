@@ -21,6 +21,22 @@ Questions
 ![image](https://github.com/user-attachments/assets/ee8f3a39-ca0a-443b-94e7-eee99eefe982)
 
 
-## Realistic Metadata
+## Metadata Selection
+### Guidance
+- start point: 3.5
+- generally higher guidance generates more polished and saturated images
+
+### Realistic Metadata
 - Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
 - Scheduler: SGM_UNIFORM, SIMPLE, BETA, *DDIM_UNIFORM
+
+
+### Illustrations
+- Sampler: EULER, DPM_ADAPTIVE, DEIS, DDIM
+- Scheduler: SGM_UNIFORM, SIMPLE, BETA, DDIM_UNIFORM
+
+### Others
+- Scheduler "KARRAS": good to give a try, sometimes it generates good image
+
+
+- 
