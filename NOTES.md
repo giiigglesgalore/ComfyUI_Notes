@@ -36,7 +36,7 @@ Questions
 - Scheduler: SGM_UNIFORM, SIMPLE, BETA, DDIM_UNIFORM
 
 ### Others
-- Scheduler "KARRAS": good to give a try, sometimes it generates good image
+- Scheduler "KARRAS": good to give it a try, sometimes it generates good image
 
 
 - 
