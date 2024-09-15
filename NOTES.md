@@ -19,3 +19,8 @@ Questions
 - IPAdapter apply up to 25% and ControlNet takes care of the rest
 - rule of thumb: keep low weight on IPAdapter to make the result stay close to the prompt
 ![image](https://github.com/user-attachments/assets/ee8f3a39-ca0a-443b-94e7-eee99eefe982)
+
+
+## Realistic Metadata
+- Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
+- Scheduler: SGM_UNIFORM, SIMPLE, BETA, *DDIM_UNIFORM
