@@ -25,6 +25,13 @@ Questions
 ### Guidance
 - start point: 3.5
 - generally higher guidance generates more polished and saturated images
+- for more cinenmatic and realistic image, lower guidance is more recommended
+- for illustration, higher guidance gives stronger style
+- for logo and text, lower guidance generates better result
+- to avoide value 1, as guidance is probably multiplied to some other value at some point and multiplying by one doesn't change anything
+- the default node doesn't allow negative value for guidance, but using below node, negative value can be applied
+  ![image](https://github.com/user-attachments/assets/828a1b3a-f2e6-4e89-af1c-6b1b7bf92f73)
+
 
 ### Realistic Metadata
 - Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
