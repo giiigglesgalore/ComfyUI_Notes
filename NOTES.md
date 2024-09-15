@@ -21,7 +21,7 @@ Questions
 ![image](https://github.com/user-attachments/assets/ee8f3a39-ca0a-443b-94e7-eee99eefe982)
 
 
-## Metadata Selection
+## FLUX: Metadata Selection
 ### Samplers and Schedulers
 - Realistic Metadata
   - Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
