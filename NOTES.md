@@ -22,6 +22,15 @@ Questions
 
 
 ## Metadata Selection
+### Samplers and Schedulers
+- Realistic Metadata
+  - Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
+  - Scheduler: SGM_UNIFORM, SIMPLE, BETA, *DDIM_UNIFORM
+- Illustrations
+  - Sampler: EULER, DPM_ADAPTIVE, DEIS, DDIM
+  - Scheduler: SGM_UNIFORM, SIMPLE, BETA, DDIM_UNIFORM
+- Scheduler "KARRAS": good to give it a try, sometimes it generates good image
+
 ### Guidance
 - start point: 3.5
 - generally higher guidance generates more polished and saturated images
@@ -32,18 +41,16 @@ Questions
 - the default node doesn't allow negative value for guidance, but using below node, negative value can be applied
   ![image](https://github.com/user-attachments/assets/828a1b3a-f2e6-4e89-af1c-6b1b7bf92f73)
 
+### Base and Max Shift
+- defalut Max/Base Shift: 1.15/0.5
+- shift is related to image size
+- the aspect ratio of generated image will change how the shift is applied
+  - at 1:1 ratio, Base Shift as no effect and only Max Shift is used
+  - in Portrait and Landscape mode, both start to have a greater impact
+- higher shift introduces more noise but generates more details. the noise can be reduced by applying more steps (more steps means more processing time)
+- it is ok not stress too much about Base/Max Shift
 
-### Realistic Metadata
-- Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
-- Scheduler: SGM_UNIFORM, SIMPLE, BETA, *DDIM_UNIFORM
-
-
-### Illustrations
-- Sampler: EULER, DPM_ADAPTIVE, DEIS, DDIM
-- Scheduler: SGM_UNIFORM, SIMPLE, BETA, DDIM_UNIFORM
-
-### Others
-- Scheduler "KARRAS": good to give it a try, sometimes it generates good image
+### Attention Patching
 
 
 - 
