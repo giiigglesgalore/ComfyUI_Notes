@@ -7,19 +7,15 @@
    2. to decrease the weight in "Apply InstantID"
    3. to add IPAdapter (Face ID model)
    4. to add second IPAdapter with desired style image sample
-
-
-Questions
-- what is "CLIP Vision"? what is the difference between "CLIP" and "CLIP Vision"?
-- what does "cfg" do in KSmapler? why with more conditioning, cfg should be lower?
-
-
-## InstantID Advanced Node
+4. InstantID Advanced Node
 - it has two components - IPAdapter embedding, ControlNet
 - IPAdapter apply up to 25% and ControlNet takes care of the rest
 - rule of thumb: keep low weight on IPAdapter to make the result stay close to the prompt
 ![image](https://github.com/user-attachments/assets/ee8f3a39-ca0a-443b-94e7-eee99eefe982)
 
+Questions
+- what is "CLIP Vision"? what is the difference between "CLIP" and "CLIP Vision"?
+- what does "cfg" do in KSmapler? why with more conditioning, cfg should be lower?
 
 ## FLUX: Metadata Selection
 ### Samplers and Schedulers
@@ -50,7 +46,33 @@ Questions
 - higher shift introduces more noise but generates more details. the noise can be reduced by applying more steps (more steps means more processing time)
 - it is ok not stress too much about Base/Max Shift
 
-### Attention Patching
+### Attention Patching (FLUX Attention Seeker node in ComfyIU Essential)
+- it is used to change the weight of the clip encoder but it is a bit of a placebo
+- clip L usually has lower effect, so can be useful to steer the composition a little
+- FLUX is not very good with styles, especially with long prompt
 
 
+
+![image](https://github.com/user-attachments/assets/29f152c4-9b0f-4338-9ee1-87045c977909)
+Q: query
+K: Key
+V: Value
+- the porportion between the query and key determines the relevance of the embedding, the two are compared and the result is applied to the value to obtain the actual weight of the block.
+- the product of this operation is finally multiplied to the output matrix that basically prepares the rsult for the next block
+- conclusion:
+  - if you want to change the behaviour of a block, you can change the proportion between query and key.
+  - if you increase the weight of both query and key, you only change their magnitude but not the relationship
+  - if you instead wish to change only the weight of the block, you work mostly with value out or both
+
+## Hand Fixing
+### MeshGraphormer
+- unable to detect baby's hands
 - 
+#### mask type
+- based on depth 
+- tight bboxes
+- original
+
+
+
+ 
