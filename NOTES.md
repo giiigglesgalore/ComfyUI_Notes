@@ -25,7 +25,7 @@ Questions
 
 ## FLUX: Metadata Selection
 ### Samplers and Schedulers
-- Realistic Metadata
+- Realistic style
   - Sampler: DPM_ADAPTIVE, DPMPP_2M, IPNDM, DEIS, DDIM, UNI_PC_BH2, *EULER
   - Scheduler: SGM_UNIFORM, SIMPLE, BETA, *DDIM_UNIFORM
 - Illustrations
