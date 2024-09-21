@@ -17,6 +17,12 @@ Questions
 - what is "CLIP Vision"? what is the difference between "CLIP" and "CLIP Vision"?
 - what does "cfg" do in KSmapler? why with more conditioning, cfg should be lower?
 
+
+## Unet
+![image](https://github.com/user-attachments/assets/1f075bb1-dd4a-4697-83f0-b076c2a9086c)
+- composed by a series of block at ever step.
+
+
 ## FLUX: Metadata Selection
 ### Samplers and Schedulers
 - Realistic Metadata
@@ -26,6 +32,7 @@ Questions
   - Sampler: EULER, DPM_ADAPTIVE, DEIS, DDIM
   - Scheduler: SGM_UNIFORM, SIMPLE, BETA, DDIM_UNIFORM
 - Scheduler "KARRAS": good to give it a try, sometimes it generates good image
+
 
 ### Guidance
 - start point: 3.5
@@ -37,6 +44,7 @@ Questions
 - the default node doesn't allow negative value for guidance, but using below node, negative value can be applied
   ![image](https://github.com/user-attachments/assets/828a1b3a-f2e6-4e89-af1c-6b1b7bf92f73)
 
+
 ### Base and Max Shift
 - defalut Max/Base Shift: 1.15/0.5
 - shift is related to image size
@@ -45,6 +53,7 @@ Questions
   - in Portrait and Landscape mode, both start to have a greater impact
 - higher shift introduces more noise but generates more details. the noise can be reduced by applying more steps (more steps means more processing time)
 - it is ok not stress too much about Base/Max Shift
+
 
 ### Attention Patching (FLUX Attention Seeker node in ComfyIU Essential)
 - it is used to change the weight of the clip encoder but it is a bit of a placebo
@@ -64,10 +73,12 @@ V: Value
   - if you increase the weight of both query and key, you only change their magnitude but not the relationship
   - if you instead wish to change only the weight of the block, you work mostly with value out or both
 
+
 ## Hand Fixing
 ### MeshGraphormer
 - unable to detect baby's hands
-- 
+
+  
 #### mask type
 - based on depth 
 - tight bboxes
