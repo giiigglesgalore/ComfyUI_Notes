@@ -15,7 +15,6 @@
 
 Questions
 - what is "CLIP Vision"? what is the difference between "CLIP" and "CLIP Vision"?
-- what does "cfg" do in KSmapler? why with more conditioning, cfg should be lower?
 
 
 ## Unet
