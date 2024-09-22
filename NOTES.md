@@ -20,8 +20,22 @@ Questions
 
 ## Unet
 ![image](https://github.com/user-attachments/assets/1f075bb1-dd4a-4697-83f0-b076c2a9086c)
-- composed by a series of block at ever step.
+- composed by a series of block. at every step, the noise goes through these blocks and each of them add something to the generation.
 
+## SDXL: Metadata
+### CFG (Classifer=Free Guidance)
+- a mechanism used to control the balance between the quality of the image generated and its adherence to the input text prompt.
+- **CFG Scale** adjusts the degree to which the model follows the input prompt. A higher CFG value means the model will place more emphasis on matching the generated image with the text prompt, possibly at the cost of image quality or coherence.
+- **Prompt Guidance** is the core principle behind CFG. The model has two paths: one where it considers both the prompt and the image, and another where it generates without the prompt. CFG enhances the influence of the prompt by amplifying the difference between these two generation paths.
+- when CFG=1:
+  - it essentially means no additional guidance is applied
+  - at this low level, the model might produce a more generic or abstract image with less relevance to the specific prompt.
+  - lower CFG values like 1 are often used to generate more creative or unpredictable outputs, though they can result in less faithful interpretations of the input prompt.
+- effects at different CFG scales:
+  - Low CFG (e.g., 1): Images may be more creative but less aligned with the prompt.
+  - Moderate CFG (e.g., 7-12): Good balance between prompt adherence and quality.
+  - High CFG (e.g., 15-20): Very close adherence to the prompt but risks overfitting (sometimes resulting in artifacts or degraded image quality).
+  
 
 ## FLUX: Metadata Selection
 ### Samplers and Schedulers
